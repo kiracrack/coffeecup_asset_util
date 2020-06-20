@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24C1C454-A413-4F9B-8B01-C94B3BEA7C1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CoffeecupFFEUtil.My.MyApplication</StartupObject>
+    <RootNamespace>CoffeecupFFEUtil</RootNamespace>
+    <AssemblyName>CoffeecupFFEUtil</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CoffeecupFFEUtil.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CoffeecupFFEUtil.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=5.0.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Coffeecup Client\Client\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module\Connection.vb" />
+    <Compile Include="Module\DataGridViewPrinter.vb" />
+    <Compile Include="Tools\frmConfirmInventory.Designer.vb">
+      <DependentUpon>frmConfirmInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmConfirmInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmMandarinAutoparts.Designer.vb">
+      <DependentUpon>frmMandarinAutoparts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmMandarinAutoparts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmUserInventorySelector.Designer.vb">
+      <DependentUpon>frmUserInventorySelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmUserInventorySelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmEmployees.Designer.vb">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmStockhouseRegistration.Designer.vb">
+      <DependentUpon>frmStockhouseRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmStockhouseRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmChangePassword.Designer.vb">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmInventoryPerformance.Designer.vb">
+      <DependentUpon>frmInventoryPerformance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmInventoryPerformance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmLoginAccount.Designer.vb">
+      <DependentUpon>frmLoginAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmLoginAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmNewInventoryEntry.Designer.vb">
+      <DependentUpon>frmNewInventoryEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmNewInventoryEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmProductRegistration.Designer.vb">
+      <DependentUpon>frmProductRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmProductRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmConnectionSetup.Designer.vb">
+      <DependentUpon>frmConnectionSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmConnectionSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmInventoryReport.Designer.vb">
+      <DependentUpon>frmInventoryReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmInventoryReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.vb">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tools\frmConfirmInventory.resx">
+      <DependentUpon>frmConfirmInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmMandarinAutoparts.resx">
+      <DependentUpon>frmMandarinAutoparts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmUserInventorySelector.resx">
+      <DependentUpon>frmUserInventorySelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmEmployees.resx">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmStockhouseRegistration.resx">
+      <DependentUpon>frmStockhouseRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmInventoryPerformance.resx">
+      <DependentUpon>frmInventoryPerformance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmLoginAccount.resx">
+      <DependentUpon>frmLoginAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmNewInventoryEntry.resx">
+      <DependentUpon>frmNewInventoryEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmProductRegistration.resx">
+      <DependentUpon>frmProductRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmConnectionSetup.resx">
+      <DependentUpon>frmConnectionSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmInventoryReport.resx">
+      <DependentUpon>frmInventoryReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time Hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock--exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook--arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-continue-180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook--minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook--pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newspapers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-excel-table.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
